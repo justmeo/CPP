@@ -1,10 +1,11 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-int main() {
+int main() 
+{
     ClapTrap ct("CT-1");
     ct.attack("Target A");
-    ct.takeDamage(3);
+    ct.takeDamage(30);
     ct.beRepaired(2);
 
     std::cout << std::endl;

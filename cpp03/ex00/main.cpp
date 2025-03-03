@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 
-int main() {
+int main()
+{
     ClapTrap ct("CT-1");
     ct.attack("Target A");
     ct.takeDamage(3);

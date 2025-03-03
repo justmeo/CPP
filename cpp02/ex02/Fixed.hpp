@@ -8,7 +8,6 @@ private:
     int _fixedPointValue;
     static const int _fractionalBits;
 public:
-    // Constructors and Destructor
     Fixed();
     Fixed(const Fixed &other);
     Fixed(const int intValue);
@@ -16,35 +15,25 @@ public:
     Fixed &operator=(const Fixed &other);
     ~Fixed();
     
-    // Accessors
     int getRawBits(void) const;
-    void setRawBits(int const raw);
-    
-    // Conversion functions
     float toFloat(void) const;
     int toInt(void) const;
-    
-    // Comparison operators
     bool operator>(const Fixed &other) const;
     bool operator<(const Fixed &other) const;
     bool operator>=(const Fixed &other) const;
+	void setRawBits(int const raw);
     bool operator<=(const Fixed &other) const;
     bool operator==(const Fixed &other) const;
     bool operator!=(const Fixed &other) const;
-    
-    // Arithmetic operators
     Fixed operator+(const Fixed &other) const;
     Fixed operator-(const Fixed &other) const;
     Fixed operator*(const Fixed &other) const;
     Fixed operator/(const Fixed &other) const;
-    
-    // Increment/Decrement operators
-    Fixed &operator++();    // Pre-increment
-    Fixed operator++(int);  // Post-increment
-    Fixed &operator--();    // Pre-decrement
-    Fixed operator--(int);  // Post-decrement
-    
-    // Static min and max functions
+    Fixed &operator++();
+    Fixed operator++(int);
+    Fixed &operator--();
+    Fixed operator--(int);
+
     static Fixed &min(Fixed &a, Fixed &b);
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static Fixed &max(Fixed &a, Fixed &b);

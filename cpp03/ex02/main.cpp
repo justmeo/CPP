@@ -2,7 +2,8 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main() {
+int main() 
+{
     ClapTrap ct("CT-1");
     ScavTrap st("ST-1");
     FragTrap ft("FT-1");
